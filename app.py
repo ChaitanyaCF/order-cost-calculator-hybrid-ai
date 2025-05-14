@@ -266,11 +266,11 @@ def main():
         
         with img_col1:
             st.image("https://pixabay.com/get/gd63ece589405079dc9190379fbbf8e055e578e9729abd134a92db9998735278ae0af9733e337f490c4e841c52981e3c01a8b3e33248d7c2cdd5f829054969261_1280.jpg", 
-                     caption="Seafood Processing Facility", use_column_width=True)
+                     caption="Seafood Processing Facility", use_container_width=True)
         
         with img_col2:
             st.image("https://pixabay.com/get/gef16ba3bb8e0b6514b99e68d7553367b391da62ea9b1043fd0ddb9cc1adbd439ab97be3f764d57d217926c44ae5fba1e611aedead4ff1b1ca649aeed3c08f511_1280.jpg", 
-                     caption="Fish Fillet Packaging", use_column_width=True)
+                     caption="Fish Fillet Packaging", use_container_width=True)
     else:
         # Render sidebar
         render_sidebar()
