@@ -1,18 +1,8 @@
-[providers]
-java = "17"
-
 [variables]
 NIXPACKS_JDK_VERSION = "17"
-MAVEN_OPTS = "-Dmaven.repo.local=.m2/repository"
-
-[phases.setup]
-nixPkgs = ["...", "maven"]
 
 [phases.build]
-cmds = ["cd backend && mvn clean package -DskipTests"]
+cmds = ["mvn clean package -DskipTests"]
 
 [phases.start]
-cmd = "cd backend && java -jar target/procost-api-0.0.1-SNAPSHOT.jar"
-
-[staticAssets]
-"backend/target/procost-api-0.0.1-SNAPSHOT.jar" = "app.jar" 
+cmd = "java -jar target/procost-api-0.0.1-SNAPSHOT.jar --server.port=$PORT" 
