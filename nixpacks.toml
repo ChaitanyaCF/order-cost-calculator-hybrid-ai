@@ -1,8 +1,12 @@
 [variables]
-NIXPACKS_JDK_VERSION = "17"
+NIXPACKS_JDK_VERSION = "11"
 
 [phases.build]
-cmds = ["mvn clean package -DskipTests"]
+cmds = [
+  "mvn clean package -DskipTests",
+  "ls -la target/",
+  "find target -name '*.jar' -type f"
+]
 
 [phases.start]
-cmd = "java -jar target/procost-api-0.0.1-SNAPSHOT.jar --server.port=$PORT" 
+cmd = "java -jar target/*.jar --server.port=$PORT" 

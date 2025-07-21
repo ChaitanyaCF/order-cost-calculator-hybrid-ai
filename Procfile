@@ -1,1 +1,1 @@
-web: cd backend && java -jar target/procost-api-0.0.1-SNAPSHOT.jar --server.port=$PORT 
+web: java -jar target/*.jar --server.port=$PORT 
